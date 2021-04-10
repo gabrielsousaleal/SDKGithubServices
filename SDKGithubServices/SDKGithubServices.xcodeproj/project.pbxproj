@@ -12,7 +12,6 @@
 		9437B87D2621EEB8005B0101 /* SDKGithubServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9437B87C2621EEB8005B0101 /* SDKGithubServicesTests.swift */; };
 		9437B87F2621EEB8005B0101 /* SDKGithubServices.h in Headers */ = {isa = PBXBuildFile; fileRef = 9437B8712621EEB8005B0101 /* SDKGithubServices.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9437B8912621EEFF005B0101 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9437B8902621EEFF005B0101 /* AppDelegate.swift */; };
-		9437B8932621EEFF005B0101 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9437B8922621EEFF005B0101 /* SceneDelegate.swift */; };
 		9437B8952621EEFF005B0101 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9437B8942621EEFF005B0101 /* ViewController.swift */; };
 		9437B8982621EEFF005B0101 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9437B8962621EEFF005B0101 /* Main.storyboard */; };
 		9437B89A2621EF00005B0101 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9437B8992621EF00005B0101 /* Assets.xcassets */; };
@@ -74,7 +73,6 @@
 		9437B87E2621EEB8005B0101 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9437B88E2621EEFF005B0101 /* SDKGithubServicesSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDKGithubServicesSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9437B8902621EEFF005B0101 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9437B8922621EEFF005B0101 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9437B8942621EEFF005B0101 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9437B8972621EEFF005B0101 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9437B8992621EF00005B0101 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -191,7 +189,6 @@
 			isa = PBXGroup;
 			children = (
 				9437B8902621EEFF005B0101 /* AppDelegate.swift */,
-				9437B8922621EEFF005B0101 /* SceneDelegate.swift */,
 				9437B8942621EEFF005B0101 /* ViewController.swift */,
 				9437B8962621EEFF005B0101 /* Main.storyboard */,
 				9437B8992621EF00005B0101 /* Assets.xcassets */,
@@ -326,7 +323,6 @@
 				9437B8732621EEB8005B0101 /* Sources */,
 				9437B8742621EEB8005B0101 /* Frameworks */,
 				9437B8752621EEB8005B0101 /* Resources */,
-				9E8E502756EED7627E76E3E3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -347,7 +343,6 @@
 				9437B88B2621EEFF005B0101 /* Frameworks */,
 				9437B88C2621EEFF005B0101 /* Resources */,
 				9473BBCB26220B6D00855A07 /* Embed Frameworks */,
-				14AE635CE6B138329EB91205 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -451,40 +446,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		14AE635CE6B138329EB91205 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SDKGithubServicesSample/Pods-SDKGithubServicesSample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SDKGithubServicesSample/Pods-SDKGithubServicesSample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SDKGithubServicesSample/Pods-SDKGithubServicesSample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9E8E502756EED7627E76E3E3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SDKGithubServices-SDKGithubServicesTests/Pods-SDKGithubServices-SDKGithubServicesTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SDKGithubServices-SDKGithubServicesTests/Pods-SDKGithubServices-SDKGithubServicesTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SDKGithubServices-SDKGithubServicesTests/Pods-SDKGithubServices-SDKGithubServicesTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C39646B30AB7E751098411E5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -558,7 +519,6 @@
 			files = (
 				9437B8952621EEFF005B0101 /* ViewController.swift in Sources */,
 				9437B8912621EEFF005B0101 /* AppDelegate.swift in Sources */,
-				9437B8932621EEFF005B0101 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -735,6 +695,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = SDKGithubServices/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -763,6 +724,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = SDKGithubServices/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -785,6 +747,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 67ALGZ83W8;
 				INFOPLIST_FILE = SDKGithubServicesTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -806,6 +769,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 67ALGZ83W8;
 				INFOPLIST_FILE = SDKGithubServicesTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -828,6 +792,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 67ALGZ83W8;
 				INFOPLIST_FILE = SDKGithubServicesSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -849,6 +814,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 67ALGZ83W8;
 				INFOPLIST_FILE = SDKGithubServicesSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

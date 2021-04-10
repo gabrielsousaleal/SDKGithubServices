@@ -24,6 +24,7 @@
 		9473BBDF2622366600855A07 /* MockServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9473BBDE2622366600855A07 /* MockServices.swift */; };
 		9473BBE4262236D200855A07 /* list.json in Resources */ = {isa = PBXBuildFile; fileRef = 9473BBE3262236D200855A07 /* list.json */; };
 		9473BC0F262246C100855A07 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9473BC172622533400855A07 /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9473BC162622533400855A07 /* assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		9473BBDA2622357B00855A07 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		9473BBDE2622366600855A07 /* MockServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServices.swift; sourceTree = "<group>"; };
 		9473BBE3262236D200855A07 /* list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = list.json; sourceTree = "<group>"; };
+		9473BC162622533400855A07 /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = assets.xcassets; path = ../../../../../../Documents/assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +260,7 @@
 		9473BC1526224D2600855A07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9473BC162622533400855A07 /* assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9473BC172622533400855A07 /* assets.xcassets in Resources */,
 				9473BBE4262236D200855A07 /* list.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

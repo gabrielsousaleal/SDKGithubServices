@@ -11,8 +11,10 @@ Pod::Spec.new do |spec|
   spec.source           = { :git => 'https://github.com/gabrielsousaleal/SDKGithubServices.git', :tag => spec.version.to_s }
   spec.platform = :ios, '10.0'
  
-  spec.source_files = 'SDKGithubServices/SDKGithubServices/Sources/**/*'
+  spec.vendored_frameworks = 'SDKGithubServices.xcframework'
 
   spec.ios.deployment_target = '10.0'
-    
+  
+  spec.frameworks = 'UIKit'
+  
 end

@@ -23,6 +23,8 @@
 		9473BBC726220B6D00855A07 /* SDKGithubServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9437B86E2621EEB8005B0101 /* SDKGithubServices.framework */; };
 		9473BBC826220B6D00855A07 /* SDKGithubServices.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9437B86E2621EEB8005B0101 /* SDKGithubServices.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9473BBDB2622357B00855A07 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9473BBDA2622357B00855A07 /* String+.swift */; };
+		9473BBDF2622366600855A07 /* MockServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9473BBDE2622366600855A07 /* MockServices.swift */; };
+		9473BBE4262236D200855A07 /* list.json in Resources */ = {isa = PBXBuildFile; fileRef = 9473BBE3262236D200855A07 /* list.json */; };
 		A6294A00A6BC526D87FBD0D3 /* Pods_SDKGithubServicesSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C132F44986508C55D4DD77B4 /* Pods_SDKGithubServicesSample.framework */; };
 		A67A10D670F25B377CC8360F /* Pods_SDKGithubServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 118E68BE753B42F62096D691 /* Pods_SDKGithubServices.framework */; };
 /* End PBXBuildFile section */
@@ -82,6 +84,8 @@
 		9473BBB22621FD6D00855A07 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		9473BBB92621FF3100855A07 /* NetworkOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkOperations.swift; sourceTree = "<group>"; };
 		9473BBDA2622357B00855A07 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		9473BBDE2622366600855A07 /* MockServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServices.swift; sourceTree = "<group>"; };
+		9473BBE3262236D200855A07 /* list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = list.json; sourceTree = "<group>"; };
 		C132F44986508C55D4DD77B4 /* Pods_SDKGithubServicesSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDKGithubServicesSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4F679FA8B50B866C3F5CF9B /* Pods-SDKGithubServicesSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDKGithubServicesSample.debug.xcconfig"; path = "Target Support Files/Pods-SDKGithubServicesSample/Pods-SDKGithubServicesSample.debug.xcconfig"; sourceTree = "<group>"; };
 		F3E8A3381695A63908C457B5 /* Pods_SDKGithubServices_SDKGithubServicesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDKGithubServices_SDKGithubServicesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -232,6 +236,7 @@
 		9437B8A92621F19F005B0101 /* Mock */ = {
 			isa = PBXGroup;
 			children = (
+				9473BBDE2622366600855A07 /* MockServices.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -249,6 +254,7 @@
 		9473BBB72621FEF300855A07 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				9473BBE2262236C100855A07 /* Mock */,
 				9473BBD92622356C00855A07 /* Extensions */,
 				9473BBB82621FEFD00855A07 /* Constants */,
 			);
@@ -269,6 +275,14 @@
 				9473BBDA2622357B00855A07 /* String+.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9473BBE2262236C100855A07 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				9473BBE3262236D200855A07 /* list.json */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -391,6 +405,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9473BBE4262236D200855A07 /* list.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,6 +539,7 @@
 				9473BBAD2621FC1600855A07 /* ServicesProtocol.swift in Sources */,
 				9473BBBA2621FF3100855A07 /* NetworkOperations.swift in Sources */,
 				9473BBDB2622357B00855A07 /* String+.swift in Sources */,
+				9473BBDF2622366600855A07 /* MockServices.swift in Sources */,
 				9473BBB32621FD6D00855A07 /* Services.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

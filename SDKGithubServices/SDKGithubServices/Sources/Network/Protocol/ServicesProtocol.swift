@@ -40,6 +40,6 @@ struct Params {
     }
 }
 
-protocol ServicesProtocol: AnyObject {
+public protocol ServicesProtocol: AnyObject {
     func getRepositories(language: CodeLanguage, page: Int, success: @escaping(Data) -> Void, failure: @escaping(Error) -> Void)
 }

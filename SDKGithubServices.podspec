@@ -1,4 +1,4 @@
-Pod::Spec.new do |s|
+Pod::Spec.new do |spec|
   spec.name             = 'SDKGithubServices'
   spec.version          = '0.1.0'
   spec.summary          = 'Pod for services for request GitHub api'

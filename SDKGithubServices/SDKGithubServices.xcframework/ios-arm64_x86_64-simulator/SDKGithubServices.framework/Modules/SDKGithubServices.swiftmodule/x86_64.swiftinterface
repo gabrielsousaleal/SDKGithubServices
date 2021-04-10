@@ -1,0 +1,32 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
+// swift-module-flags: -target x86_64-apple-ios14.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SDKGithubServices
+import Foundation
+@_exported import SDKGithubServices
+import Swift
+public enum CodeLanguage : Swift.String {
+  case swift
+  case java
+  case kotlin
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol ServicesProtocol : AnyObject {
+  func getRepositories(language: SDKGithubServices.CodeLanguage, page: Swift.Int, success: @escaping (Foundation.Data) -> Swift.Void, failure: @escaping (Swift.Error) -> Swift.Void)
+}
+@_hasMissingDesignatedInitializers public class MockServices : SDKGithubServices.ServicesProtocol {
+  public static let shared: SDKGithubServices.MockServices
+  public func getRepositories(language: SDKGithubServices.CodeLanguage, page: Swift.Int, success: @escaping (Foundation.Data) -> Swift.Void, failure: @escaping (Swift.Error) -> Swift.Void)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class Services : SDKGithubServices.ServicesProtocol {
+  public static let shared: SDKGithubServices.Services
+  public func getRepositories(language: SDKGithubServices.CodeLanguage, page: Swift.Int, success: @escaping (Foundation.Data) -> Swift.Void, failure: @escaping (Swift.Error) -> Swift.Void)
+  @objc deinit
+}
+extension SDKGithubServices.CodeLanguage : Swift.Equatable {}
+extension SDKGithubServices.CodeLanguage : Swift.Hashable {}
+extension SDKGithubServices.CodeLanguage : Swift.RawRepresentable {}

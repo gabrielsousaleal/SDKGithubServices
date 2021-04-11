@@ -37,4 +37,5 @@ struct Params {
 public protocol ServicesProtocol: AnyObject {
     func getRepositories(language: String, page: Int, success: @escaping(Data) -> Void, failure: @escaping(Error) -> Void)
     func getUser(username: String, success: @escaping(Data) -> Void, failure: @escaping(Error) -> Void)
+    func request(url: URL, success: @escaping(Data) -> Void, failure: @escaping(Error) -> Void)
 }

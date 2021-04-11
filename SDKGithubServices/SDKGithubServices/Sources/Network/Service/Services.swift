@@ -52,27 +52,27 @@ public class Services: ServicesProtocol {
                 })
     }
 
-    // MARK: - Private Methods
-
-    private func request(url: URL, success: @escaping(Data) -> Void, failure: @escaping(Error) -> Void) {
-        var request = URLRequest(url: url,
-                                 cachePolicy: .useProtocolCachePolicy,
-                                 timeoutInterval: 10.0)
-        request.httpMethod = HTTPMethod.get.rawValue
-        let session = URLSession.shared
-        let dataTask = session.dataTask(with: request) { (data, response, error) in
-            if let error = error {
-                failure(error)
-                return
-            }
-
-            if let data = data {
-                success(data)
-                return
-            }
+    public func request(url: URL, success: @escaping(Data) -> Void, failure: @escaping(Error) -> Void) {
+    var request = URLRequest(url: url,
+                                cachePolicy: .useProtocolCachePolicy,
+                                timeoutInterval: 10.0)
+    request.httpMethod = HTTPMethod.get.rawValue
+    let session = URLSession.shared
+    let dataTask = session.dataTask(with: request) { (data, response, error) in
+        if let error = error {
+            failure(error)
+            return
         }
-        dataTask.resume()
+
+        if let data = data {
+            success(data)
+            return
+        }
     }
+    dataTask.resume()
+}
+
+    // MARK: - Private Methods
 
     private func getUserParams() -> Params {
         var params = Params()

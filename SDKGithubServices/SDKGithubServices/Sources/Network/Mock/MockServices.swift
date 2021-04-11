@@ -8,7 +8,7 @@
 import Foundation
 
 public class MockServices: ServicesProtocol {
-
+   
     // MARK: - Private Properties
 
     private let jsonExtension = "json"
@@ -43,5 +43,8 @@ public class MockServices: ServicesProtocol {
                 failure(error)
             }
         }
+    }
+
+    public func request(url: URL, success: @escaping (Data) -> Void, failure: @escaping (Error) -> Void) {
     }
 }

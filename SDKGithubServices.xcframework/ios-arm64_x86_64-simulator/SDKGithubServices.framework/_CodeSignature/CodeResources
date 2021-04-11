@@ -22,11 +22,11 @@
 		</data>
 		<key>Modules/SDKGithubServices.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		wIMMXa3/gfhuL2rIgTO76swNrtU=
+		ShAVXRz6G4gE5WjyI8WNNDE8g30=
 		</data>
 		<key>Modules/SDKGithubServices.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		RNCQ7TrsuBDzLwnuvthLv+FsFPQ=
+		Am4THEjozVkSXdy0M0V1cjentSM=
 		</data>
 		<key>Modules/SDKGithubServices.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Modules/SDKGithubServices.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		wIMMXa3/gfhuL2rIgTO76swNrtU=
+		ShAVXRz6G4gE5WjyI8WNNDE8g30=
 		</data>
 		<key>Modules/SDKGithubServices.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		RNCQ7TrsuBDzLwnuvthLv+FsFPQ=
+		Am4THEjozVkSXdy0M0V1cjentSM=
 		</data>
 		<key>Modules/SDKGithubServices.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -46,11 +46,11 @@
 		</data>
 		<key>Modules/SDKGithubServices.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		MESev+JU1k43DJe0/JIqAqwVzgM=
+		gir8u46yCWNjN9sz5aKBMRdjWH4=
 		</data>
 		<key>Modules/SDKGithubServices.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		3D4v+9rqMW1NXkD49QFYop7CQr0=
+		4SRH7F6IyiRLJ6PUkuthxBBrga4=
 		</data>
 		<key>Modules/SDKGithubServices.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -58,11 +58,11 @@
 		</data>
 		<key>Modules/SDKGithubServices.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		MESev+JU1k43DJe0/JIqAqwVzgM=
+		gir8u46yCWNjN9sz5aKBMRdjWH4=
 		</data>
 		<key>Modules/SDKGithubServices.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		3D4v+9rqMW1NXkD49QFYop7CQr0=
+		4SRH7F6IyiRLJ6PUkuthxBBrga4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -100,14 +100,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			X38pDComTQXYWPOGklY7ADlcl5+Q2MiAujepM7QZuBA=
+			fh67hJRgt7OdyeMBddeeKwJ5Hfn0ytAViNFN1TtIJgU=
 			</data>
 		</dict>
 		<key>Modules/SDKGithubServices.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			g2uqRj5dMqxxIkT11uFAuQcsCXgY182hsJfcqpvewmY=
+			g/ptrFU2YQoBzMIBdARucXs6Z9RqAdrs55ARQRlVzXw=
 			</data>
 		</dict>
 		<key>Modules/SDKGithubServices.swiftmodule/arm64.swiftdoc</key>
@@ -121,14 +121,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			X38pDComTQXYWPOGklY7ADlcl5+Q2MiAujepM7QZuBA=
+			fh67hJRgt7OdyeMBddeeKwJ5Hfn0ytAViNFN1TtIJgU=
 			</data>
 		</dict>
 		<key>Modules/SDKGithubServices.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			g2uqRj5dMqxxIkT11uFAuQcsCXgY182hsJfcqpvewmY=
+			g/ptrFU2YQoBzMIBdARucXs6Z9RqAdrs55ARQRlVzXw=
 			</data>
 		</dict>
 		<key>Modules/SDKGithubServices.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -142,14 +142,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pwrRM/+jWISNE06mZP73MipGWdlmHt10ewTVEvouCIU=
+			4eG2PMP9NCWXv12PZ6k/hE0ZcG4O/n+yQLfwvf+LmaQ=
 			</data>
 		</dict>
 		<key>Modules/SDKGithubServices.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hWRK7Hck8lVyi2kY5ySrzz7wruzwa4kfDCRpWklwhhY=
+			EawIM83weHLJ/DCj7R3fZw6V81QT/4GH1czIo8AgR5k=
 			</data>
 		</dict>
 		<key>Modules/SDKGithubServices.swiftmodule/x86_64.swiftdoc</key>
@@ -163,14 +163,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pwrRM/+jWISNE06mZP73MipGWdlmHt10ewTVEvouCIU=
+			4eG2PMP9NCWXv12PZ6k/hE0ZcG4O/n+yQLfwvf+LmaQ=
 			</data>
 		</dict>
 		<key>Modules/SDKGithubServices.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hWRK7Hck8lVyi2kY5ySrzz7wruzwa4kfDCRpWklwhhY=
+			EawIM83weHLJ/DCj7R3fZw6V81QT/4GH1czIo8AgR5k=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

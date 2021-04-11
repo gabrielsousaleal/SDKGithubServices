@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9417D1BD26239FF900F8FEE5 /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = 9417D1BC26239FF900F8FEE5 /* user.json */; };
 		9437B8782621EEB8005B0101 /* SDKGithubServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9437B86E2621EEB8005B0101 /* SDKGithubServices.framework */; };
 		9437B87D2621EEB8005B0101 /* SDKGithubServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9437B87C2621EEB8005B0101 /* SDKGithubServicesTests.swift */; };
 		9437B87F2621EEB8005B0101 /* SDKGithubServices.h in Headers */ = {isa = PBXBuildFile; fileRef = 9437B8712621EEB8005B0101 /* SDKGithubServices.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -24,8 +23,7 @@
 		9473BBDB2622357B00855A07 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9473BBDA2622357B00855A07 /* String+.swift */; };
 		9473BBDF2622366600855A07 /* MockServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9473BBDE2622366600855A07 /* MockServices.swift */; };
 		9473BBE4262236D200855A07 /* list.json in Resources */ = {isa = PBXBuildFile; fileRef = 9473BBE3262236D200855A07 /* list.json */; };
-		9473BC0F262246C100855A07 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9473BC172622533400855A07 /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9473BC162622533400855A07 /* assets.xcassets */; };
+		9473BC0F262246C100855A07 /* BuildFile in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +61,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9473BC0F262246C100855A07 /* (null) in Embed Frameworks */,
+				9473BC0F262246C100855A07 /* BuildFile in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,7 +69,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9417D1BC26239FF900F8FEE5 /* user.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = user.json; sourceTree = "<group>"; };
 		9437B86E2621EEB8005B0101 /* SDKGithubServices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SDKGithubServices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9437B8712621EEB8005B0101 /* SDKGithubServices.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDKGithubServices.h; sourceTree = "<group>"; };
 		9437B8722621EEB8005B0101 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -91,7 +88,6 @@
 		9473BBDA2622357B00855A07 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		9473BBDE2622366600855A07 /* MockServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServices.swift; sourceTree = "<group>"; };
 		9473BBE3262236D200855A07 /* list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = list.json; sourceTree = "<group>"; };
-		9473BC162622533400855A07 /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = assets.xcassets; path = ../../../../../../Documents/assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,7 +148,7 @@
 		9437B8702621EEB8005B0101 /* SDKGithubServices */ = {
 			isa = PBXGroup;
 			children = (
-				9473BC1526224D2600855A07 /* Resources */,
+				9437B8A62621F17C005B0101 /* Resources */,
 				9437B8A52621F174005B0101 /* Sources */,
 				9437B8712621EEB8005B0101 /* SDKGithubServices.h */,
 				9437B8722621EEB8005B0101 /* Info.plist */,
@@ -189,6 +185,13 @@
 				9473BBB12621FC3D00855A07 /* Network */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		9437B8A62621F17C005B0101 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		9437B8A72621F186005B0101 /* Protocol */ = {
@@ -254,18 +257,9 @@
 		9473BBE2262236C100855A07 /* Mock */ = {
 			isa = PBXGroup;
 			children = (
-				9417D1BC26239FF900F8FEE5 /* user.json */,
 				9473BBE3262236D200855A07 /* list.json */,
 			);
 			path = Mock;
-			sourceTree = "<group>";
-		};
-		9473BC1526224D2600855A07 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				9473BC162622533400855A07 /* assets.xcassets */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,8 +378,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9417D1BD26239FF900F8FEE5 /* user.json in Resources */,
-				9473BC172622533400855A07 /* assets.xcassets in Resources */,
 				9473BBE4262236D200855A07 /* list.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

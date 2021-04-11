@@ -13,6 +13,8 @@ public class Services: ServicesProtocol {
 
     private let kCodeLanguageKey = "language"
     private let kPageKey = "page"
+    private let kSortKey = "sort"
+    private let kSortValue = "star"
 
     // MARK: - Private Properties
 
@@ -24,10 +26,35 @@ public class Services: ServicesProtocol {
 
     // MARK: - Public Methods
 
+    public func getUser(username: String, success: @escaping (Data) -> Void, failure: @escaping (Error) -> Void) {
+        guard let url = URL(string: String(format: operations.user, username)) else {
+            return
+        }
+        request(url: url,
+                success: { data in
+                    success(data)
+                },
+                failure: { error in
+                    failure(error)
+                })
+    }
+
     public func getRepositories(language: String, page: Int, success: @escaping (Data) -> Void, failure: @escaping(Error) -> Void) {
         guard let url = getRepositoriesListUrl(language: language, page: page) else {
             return
         }
+        request(url: url,
+                success: { data in
+                    success(data)
+                },
+                failure: { error in
+                    failure(error)
+                })
+    }
+
+    // MARK: - Private Methods
+
+    private func request(url: URL, success: @escaping(Data) -> Void, failure: @escaping(Error) -> Void) {
         var request = URLRequest(url: url,
                                  cachePolicy: .useProtocolCachePolicy,
                                  timeoutInterval: 10.0)
@@ -47,12 +74,18 @@ public class Services: ServicesProtocol {
         dataTask.resume()
     }
 
-    // MARK: - Private Methods
+    private func getUserParams() -> Params {
+        var params = Params()
+        params.method = .get
+        return params
+    }
 
     private func getRepositoriesListParams(language: String, page: Int) -> Params {
         var params = Params()
-        params.method =  .get
-        params.query = [kCodeLanguageKey: language, kPageKey: page]
+        params.method = .get
+        params.query = [kCodeLanguageKey: language,
+                        kPageKey: page,
+                        kSortKey: kSortValue]
         return params
     }
 

@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -27,22 +26,13 @@
                                     <action selector="listRepositories:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RxP-Fh-itx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l1e-YJ-9ZJ">
-                                <rect key="frame" x="150.5" y="503" width="113" height="30"/>
-                                <state key="normal" title="procurar usuario"/>
-                                <connections>
-                                    <action selector="getUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XyF-9m-Ynv"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="l1e-YJ-9ZJ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5ta-MC-2CR"/>
                             <constraint firstItem="TFO-wV-WpB" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="OBI-bE-H1L"/>
                             <constraint firstItem="TFO-wV-WpB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fOK-YG-ab8"/>
                             <constraint firstItem="TFO-wV-WpB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hZk-Tc-Fy8"/>
-                            <constraint firstItem="l1e-YJ-9ZJ" firstAttribute="top" secondItem="TFO-wV-WpB" secondAttribute="bottom" constant="26" id="xth-St-j2l"/>
                         </constraints>
                     </view>
                 </viewController>

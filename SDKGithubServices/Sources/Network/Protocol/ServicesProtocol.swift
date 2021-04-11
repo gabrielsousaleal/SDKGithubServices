@@ -7,6 +7,12 @@
 
 import Foundation
 
+public enum CodeLanguage: String {
+    case swift = "Swift"
+    case java = "Java"
+    case kotlin = "Kotlin"
+}
+
 enum HTTPMethod: String {
     case get = "GET"
 }
@@ -35,6 +41,5 @@ struct Params {
 }
 
 public protocol ServicesProtocol: AnyObject {
-    func getRepositories(language: String, page: Int, success: @escaping(Data) -> Void, failure: @escaping(Error) -> Void)
-    func getUser(username: String, success: @escaping(Data) -> Void, failure: @escaping(Error) -> Void)
+    func getRepositories(language: CodeLanguage, page: Int, success: @escaping(Data) -> Void, failure: @escaping(Error) -> Void)
 }

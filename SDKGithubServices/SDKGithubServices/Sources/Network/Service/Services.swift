@@ -24,7 +24,7 @@ public class Services: ServicesProtocol {
 
     // MARK: - Public Methods
 
-    public func getRepositories(language: CodeLanguage, page: Int, success: @escaping (Data) -> Void, failure: @escaping(Error) -> Void) {
+    public func getRepositories(language: String, page: Int, success: @escaping (Data) -> Void, failure: @escaping(Error) -> Void) {
         guard let url = getRepositoriesListUrl(language: language, page: page) else {
             return
         }
@@ -49,14 +49,14 @@ public class Services: ServicesProtocol {
 
     // MARK: - Private Methods
 
-    private func getRepositoriesListParams(language: CodeLanguage, page: Int) -> Params {
+    private func getRepositoriesListParams(language: String, page: Int) -> Params {
         var params = Params()
         params.method =  .get
-        params.query = [kCodeLanguageKey: language.rawValue, kPageKey: page]
+        params.query = [kCodeLanguageKey: language, kPageKey: page]
         return params
     }
 
-    private func getRepositoriesListUrl(language: CodeLanguage, page: Int) -> URL? {
+    private func getRepositoriesListUrl(language: String, page: Int) -> URL? {
         let params = getRepositoriesListParams(language: language, page: page)
         var url = operations.repositoriesList
         url?.query = params.queryString

@@ -8,6 +8,10 @@
 import UIKit
 import SDKGithubServices
 
+enum CodeLanguage: String {
+    case swift = "swift"
+}
+
 class ViewController: UIViewController {
 
     // MARK: - Constants
@@ -43,7 +47,7 @@ class ViewController: UIViewController {
     @IBAction func listRepositories(_ sender: Any) {
         openServiceTypeAlert {
             self.service?.getRepositories(
-                language: .swift,
+                language: CodeLanguage.swift.rawValue,
                 page: 1,
                 success: { data in
                     do {

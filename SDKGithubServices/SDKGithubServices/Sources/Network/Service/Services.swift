@@ -14,7 +14,7 @@ public class Services: ServicesProtocol {
     private let kCodeLanguageKey = "language"
     private let kPageKey = "page"
     private let kSortKey = "sort"
-    private let kSortValue = "star"
+    private let kSortValue = "stars"
 
     // MARK: - Private Properties
 
@@ -43,6 +43,7 @@ public class Services: ServicesProtocol {
         guard let url = getRepositoriesListUrl(language: language, page: page) else {
             return
         }
+        print(url, "suco")
         request(url: url,
                 success: { data in
                     success(data)
@@ -55,7 +56,7 @@ public class Services: ServicesProtocol {
     public func request(url: URL, success: @escaping(Data) -> Void, failure: @escaping(Error) -> Void) {
     var request = URLRequest(url: url,
                                 cachePolicy: .useProtocolCachePolicy,
-                                timeoutInterval: 10.0)
+                                timeoutInterval: 100.0)
     request.httpMethod = HTTPMethod.get.rawValue
     let session = URLSession.shared
     let dataTask = session.dataTask(with: request) { (data, response, error) in

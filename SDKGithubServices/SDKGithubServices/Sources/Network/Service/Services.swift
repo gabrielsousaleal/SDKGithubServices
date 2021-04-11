@@ -13,8 +13,6 @@ public class Services: ServicesProtocol {
 
     private let kCodeLanguageKey = "language"
     private let kPageKey = "page"
-    private let kSortKey = "sort"
-    private let kSortValue = "stars"
 
     // MARK: - Private Properties
 
@@ -85,8 +83,7 @@ public class Services: ServicesProtocol {
         var params = Params()
         params.method = .get
         params.query = [kCodeLanguageKey: language,
-                        kPageKey: page,
-                        kSortKey: kSortValue]
+                        kPageKey: page]
         return params
     }
 

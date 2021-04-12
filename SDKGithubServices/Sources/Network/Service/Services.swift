@@ -16,7 +16,7 @@ public class Services: ServicesProtocol {
     private let kCodeLanguageValue = "language:%@"
     private let kSortKey = "sort"
     private let token = "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"
-    private let tokenKey = "OAuth2"
+    private let tokenKey = "Authorization"
 
     // MARK: - Private Properties
 

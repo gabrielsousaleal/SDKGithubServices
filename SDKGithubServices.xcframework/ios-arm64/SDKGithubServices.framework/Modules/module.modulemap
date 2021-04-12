@@ -1,0 +1,11 @@
+framework module SDKGithubServices {
+  umbrella header "SDKGithubServices.h"
+
+  export *
+  module * { export * }
+}
+
+module SDKGithubServices.Swift {
+    header "SDKGithubServices-Swift.h"
+    requires objc
+}

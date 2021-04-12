@@ -24,39 +24,71 @@ public class Services: ServicesProtocol {
 
     // MARK: - Public Methods
 
-    public func getRepositories(language: CodeLanguage, page: Int, success: @escaping (Data) -> Void, failure: @escaping(Error) -> Void) {
+    public func getUser(username: String, success: @escaping (Data) -> Void, failure: @escaping (Error) -> Void) {
+        guard let url = URL(string: String(format: operations.user, username)) else {
+            return
+        }
+        request(url: url,
+                success: { data in
+                    success(data)
+                },
+                failure: { error in
+                    failure(error)
+                })
+    }
+
+    public func getRepositories(language: String, page: Int, success: @escaping (Data) -> Void, failure: @escaping(Error) -> Void) {
         guard let url = getRepositoriesListUrl(language: language, page: page) else {
             return
         }
-        var request = URLRequest(url: url,
-                                 cachePolicy: .useProtocolCachePolicy,
-                                 timeoutInterval: 10.0)
-        request.httpMethod = HTTPMethod.get.rawValue
-        let session = URLSession.shared
-        let dataTask = session.dataTask(with: request) { (data, response, error) in
-            if let error = error {
-                failure(error)
-                return
-            }
-
-            if let data = data {
-                success(data)
-                return
-            }
-        }
-        dataTask.resume()
+        let header = getRepositoriesListParams(language: language, page: page).header
+        request(url: url,
+                header: header,
+                success: { data in
+                    success(data)
+                },
+                failure: { error in
+                    failure(error)
+                })
     }
+
+    public func request(url: URL, header: [String: Any] = [:], success: @escaping(Data) -> Void, failure: @escaping(Error) -> Void) {
+    var request = URLRequest(url: url,
+                                cachePolicy: .useProtocolCachePolicy,
+                                timeoutInterval: 100.0)
+    request.httpMethod = HTTPMethod.get.rawValue
+    let session = URLSession.shared
+    let dataTask = session.dataTask(with: request) { (data, response, error) in
+        if let error = error {
+            failure(error)
+            return
+        }
+
+        if let data = data {
+            success(data)
+            return
+        }
+    }
+    dataTask.resume()
+}
 
     // MARK: - Private Methods
 
-    private func getRepositoriesListParams(language: CodeLanguage, page: Int) -> Params {
+    private func getUserParams() -> Params {
         var params = Params()
-        params.method =  .get
-        params.query = [kCodeLanguageKey: language.rawValue, kPageKey: page]
+        params.method = .get
         return params
     }
 
-    private func getRepositoriesListUrl(language: CodeLanguage, page: Int) -> URL? {
+    private func getRepositoriesListParams(language: String, page: Int) -> Params {
+        var params = Params()
+        params.method = .get
+        params.header = [kCodeLanguageKey: language]
+        params.query = [kPageKey: page]
+        return params
+    }
+
+    private func getRepositoriesListUrl(language: String, page: Int) -> URL? {
         let params = getRepositoriesListParams(language: language, page: page)
         var url = operations.repositoriesList
         url?.query = params.queryString

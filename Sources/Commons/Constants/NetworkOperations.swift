@@ -9,5 +9,4 @@ import Foundation
 
 struct NetworkOperations {
     let repositoriesList = URLComponents(string: "https://api.github.com/search/repositories")
-    let user = "https://api.github.com/users/%@"
 }

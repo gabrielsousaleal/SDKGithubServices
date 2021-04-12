@@ -7,12 +7,6 @@
 
 import Foundation
 
-public enum CodeLanguage: String {
-    case swift = "Swift"
-    case java = "Java"
-    case kotlin = "Kotlin"
-}
-
 enum HTTPMethod: String {
     case get = "GET"
 }
@@ -33,7 +27,8 @@ struct Params {
     var queryString: String {
         var queryItemList: [URLQueryItem] = []
         query.forEach { item in
-            queryItemList.append(URLQueryItem(name: item.key, value: item.value as? String))
+            let valueString = "\(item.value)"
+            queryItemList.append(URLQueryItem(name: item.key, value: valueString))
         }
         let query = "\(kDefaultQueryKey)\(queryItemList)"
         return query
@@ -41,5 +36,7 @@ struct Params {
 }
 
 public protocol ServicesProtocol: AnyObject {
-    func getRepositories(language: CodeLanguage, page: Int, success: @escaping(Data) -> Void, failure: @escaping(Error) -> Void)
+    func getRepositories(language: String, page: Int, success: @escaping(Data) -> Void, failure: @escaping(Error) -> Void)
+    func getUser(username: String, success: @escaping(Data) -> Void, failure: @escaping(Error) -> Void)
+    func request(url: URL, header: [String: Any], success: @escaping(Data) -> Void, failure: @escaping(Error) -> Void)
 }

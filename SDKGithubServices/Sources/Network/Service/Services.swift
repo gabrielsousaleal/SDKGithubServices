@@ -18,7 +18,7 @@ public class Services: ServicesProtocol {
     private let tokenKey = "Authorization"
     private var token: String {
         let bundle = Bundle(for: Services.self)
-        return bundle.object(forInfoDictionaryKey: "Api_token") as? String ?? .empty
+        return bundle.object(forInfoDictionaryKey: "Api_toke") as? String ?? .empty
     }
 
     // MARK: - Private Properties

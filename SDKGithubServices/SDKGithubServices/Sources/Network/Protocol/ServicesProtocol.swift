@@ -27,7 +27,8 @@ struct Params {
     var queryString: String {
         var queryItemList: [URLQueryItem] = []
         query.forEach { item in
-            queryItemList.append(URLQueryItem(name: item.key, value: item.value as? String))
+            let valueString = "\(item.value)"
+            queryItemList.append(URLQueryItem(name: item.key, value: valueString))
         }
         let query = "\(kDefaultQueryKey)\(queryItemList)"
         return query

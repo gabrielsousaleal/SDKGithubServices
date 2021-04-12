@@ -41,7 +41,6 @@ public class Services: ServicesProtocol {
         guard let url = getRepositoriesListUrl(language: language, page: page) else {
             return
         }
-        print(url, "suco")
         request(url: url,
                 success: { data in
                     success(data)

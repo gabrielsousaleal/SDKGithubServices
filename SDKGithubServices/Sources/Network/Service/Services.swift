@@ -17,8 +17,7 @@ public class Services: ServicesProtocol {
     private let kSortKey = "sort"
     private let tokenKey = "Authorization"
     private var token: String {
-        let bundle = Bundle(for: Services.self)
-        let base64 = bundle.object(forInfoDictionaryKey: "Api_token") as? String ?? .empty
+        let base64 = "dG9rZW4gZ2hwX2hOdTdxNlhSQmJXTXF3UngwNENqdW5wM0dvRGx0SjJDUjk0cQ=="
         let encoded = Data(base64Encoded: base64) ?? Data()
         return String(data: encoded, encoding: .utf8) ?? .empty
     }

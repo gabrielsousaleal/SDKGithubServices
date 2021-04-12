@@ -41,7 +41,9 @@ public class Services: ServicesProtocol {
         guard let url = getRepositoriesListUrl(language: language, page: page) else {
             return
         }
+        let header = getRepositoriesListParams(language: language, page: page).header
         request(url: url,
+                header: header,
                 success: { data in
                     success(data)
                 },
@@ -50,7 +52,7 @@ public class Services: ServicesProtocol {
                 })
     }
 
-    public func request(url: URL, success: @escaping(Data) -> Void, failure: @escaping(Error) -> Void) {
+    public func request(url: URL, header: [String: Any] = [:], success: @escaping(Data) -> Void, failure: @escaping(Error) -> Void) {
     var request = URLRequest(url: url,
                                 cachePolicy: .useProtocolCachePolicy,
                                 timeoutInterval: 100.0)
@@ -81,8 +83,8 @@ public class Services: ServicesProtocol {
     private func getRepositoriesListParams(language: String, page: Int) -> Params {
         var params = Params()
         params.method = .get
-        params.query = [kCodeLanguageKey: language,
-                        kPageKey: page]
+        params.header = [kCodeLanguageKey: language]
+        params.query = [kPageKey: page]
         return params
     }
 

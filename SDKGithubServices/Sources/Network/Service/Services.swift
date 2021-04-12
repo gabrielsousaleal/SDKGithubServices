@@ -18,7 +18,9 @@ public class Services: ServicesProtocol {
     private let tokenKey = "Authorization"
     private var token: String {
         let bundle = Bundle(for: Services.self)
-        return bundle.object(forInfoDictionaryKey: "Api_toke") as? String ?? .empty
+        let base64 = bundle.object(forInfoDictionaryKey: "Api_token") as? String ?? .empty
+        let encoded = Data(base64Encoded: base64) ?? Data()
+        return String(data: encoded, encoding: .utf8) ?? .empty
     }
 
     // MARK: - Private Properties

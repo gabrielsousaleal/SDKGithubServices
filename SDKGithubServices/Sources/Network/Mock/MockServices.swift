@@ -32,7 +32,7 @@ public class MockServices: ServicesProtocol {
         }
     }
 
-    public func getRepositories(language: String, page: Int, success: @escaping (Data) -> Void, failure: @escaping (Error) -> Void) {
+    public func getRepositories(language: String, page: Int, sortBy: String, success: @escaping (Data) -> Void, failure: @escaping (Error) -> Void) {
         let path = "list"
 
         if let url = Bundle(for: MockServices.self).url(forResource: path, withExtension: jsonExtension) {

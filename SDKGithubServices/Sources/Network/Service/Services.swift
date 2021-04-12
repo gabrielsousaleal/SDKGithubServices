@@ -14,7 +14,6 @@ public class Services: ServicesProtocol {
     private let kCodeLanguageKey = "q"
     private let kPageKey = "page"
     private let kCodeLanguageValue = "language:%@"
-    private let kSortValue = "stars"
     private let kSortKey = "sort"
 
     // MARK: - Private Properties
@@ -40,8 +39,8 @@ public class Services: ServicesProtocol {
                 })
     }
 
-    public func getRepositories(language: String, page: Int, success: @escaping (Data) -> Void, failure: @escaping(Error) -> Void) {
-        guard let url = getRepositoriesListUrl(language: language, page: page) else {
+    public func getRepositories(language: String, page: Int, sortBy: String, success: @escaping (Data) -> Void, failure: @escaping(Error) -> Void) {
+        guard let url = getRepositoriesListUrl(language: language, page: page, sortBy: sortBy) else {
             return
         }
         request(url: url,
@@ -54,25 +53,24 @@ public class Services: ServicesProtocol {
     }
 
     public func request(url: URL, success: @escaping(Data) -> Void, failure: @escaping(Error) -> Void) {
-        print("aqui", url)
-    var request = URLRequest(url: url,
+        var request = URLRequest(url: url,
                                 cachePolicy: .useProtocolCachePolicy,
                                 timeoutInterval: 100.0)
-    request.httpMethod = HTTPMethod.get.rawValue
-    let session = URLSession.shared
-    let dataTask = session.dataTask(with: request) { (data, response, error) in
-        if let error = error {
-            failure(error)
-            return
-        }
+        request.httpMethod = HTTPMethod.get.rawValue
+        let session = URLSession.shared
+        let dataTask = session.dataTask(with: request) { (data, response, error) in
+            if let error = error {
+                failure(error)
+                return
+            }
 
-        if let data = data {
-            success(data)
-            return
+            if let data = data {
+                success(data)
+                return
+            }
         }
+        dataTask.resume()
     }
-    dataTask.resume()
-}
 
     // MARK: - Private Methods
 
@@ -82,19 +80,22 @@ public class Services: ServicesProtocol {
         return params
     }
 
-    private func getRepositoriesListParams(language: String, page: Int) -> Params {
+    private func getRepositoriesListParams(language: String, page: Int, sortBy: String) -> Params {
         var params = Params()
         params.method = .get
         params.query = [kPageKey: page,
-                        kSortKey: kSortValue,
+                        kSortKey: sortBy,
                         kCodeLanguageKey: String(format: kCodeLanguageValue, language)]
         return params
     }
 
-    private func getRepositoriesListUrl(language: String, page: Int) -> URL? {
-        let params = getRepositoriesListParams(language: language, page: page)
+    private func getRepositoriesListUrl(language: String, page: Int, sortBy: String) -> URL? {
+        let params = getRepositoriesListParams(language: language, page: page, sortBy: sortBy)
         var url = operations.repositoriesList
-        url?.query = params.queryString
+        url?.queryItems = []
+        params.query.forEach { item in
+            url?.queryItems?.append(URLQueryItem(name: item.key, value: "\(item.value)"))
+        }
         return url?.url
     }
 }

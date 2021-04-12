@@ -83,6 +83,7 @@ class ViewController: UIViewController {
             self.service?.getRepositories(
                 language: CodeLanguage.swift.rawValue,
                 page: 1,
+                sortBy: "stars",
                 success: { data in
                     self.printJson(data: data)
                  }, failure: { error in

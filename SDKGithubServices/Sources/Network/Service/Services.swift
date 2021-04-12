@@ -15,6 +15,8 @@ public class Services: ServicesProtocol {
     private let kPageKey = "page"
     private let kCodeLanguageValue = "language:%@"
     private let kSortKey = "sort"
+    private let token = "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"
+    private let tokenKey = "OAuth2"
 
     // MARK: - Private Properties
 
@@ -57,6 +59,7 @@ public class Services: ServicesProtocol {
                                 cachePolicy: .useProtocolCachePolicy,
                                 timeoutInterval: 100.0)
         request.httpMethod = HTTPMethod.get.rawValue
+        request.addValue(token, forHTTPHeaderField: tokenKey)
         let session = URLSession.shared
         let dataTask = session.dataTask(with: request) { (data, response, error) in
             if let error = error {

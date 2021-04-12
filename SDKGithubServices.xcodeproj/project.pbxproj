@@ -601,6 +601,7 @@
 		9437B8832621EEB8005B0101 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				API_TOKEN = "token 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";
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -629,6 +630,7 @@
 		9437B8842621EEB8005B0101 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				API_TOKEN = "token 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";
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;

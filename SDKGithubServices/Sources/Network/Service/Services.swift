@@ -15,8 +15,11 @@ public class Services: ServicesProtocol {
     private let kPageKey = "page"
     private let kCodeLanguageValue = "language:%@"
     private let kSortKey = "sort"
-    private let token = "token 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"
     private let tokenKey = "Authorization"
+    private var token: String {
+        let bundle = Bundle(for: Services.self)
+        return bundle.object(forInfoDictionaryKey: "Api_token") as? String ?? .empty
+    }
 
     // MARK: - Private Properties
 

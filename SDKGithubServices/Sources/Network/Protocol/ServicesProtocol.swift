@@ -13,10 +13,6 @@ enum HTTPMethod: String {
 
 struct Params {
 
-    // MARK: - Constants
-
-    private let kDefaultQueryKey = "q="
-
     // MARK: - Public Properties
 
     var method: HTTPMethod = .get
@@ -30,7 +26,7 @@ struct Params {
             let valueString = "\(item.value)"
             queryItemList.append(URLQueryItem(name: item.key, value: valueString))
         }
-        let query = "\(kDefaultQueryKey)\(queryItemList)"
+        let query = "\(queryItemList)"
         return query
     }
 }
@@ -38,5 +34,5 @@ struct Params {
 public protocol ServicesProtocol: AnyObject {
     func getRepositories(language: String, page: Int, success: @escaping(Data) -> Void, failure: @escaping(Error) -> Void)
     func getUser(username: String, success: @escaping(Data) -> Void, failure: @escaping(Error) -> Void)
-    func request(url: URL, header: [String: Any], success: @escaping(Data) -> Void, failure: @escaping(Error) -> Void)
+    func request(url: URL, success: @escaping(Data) -> Void, failure: @escaping(Error) -> Void)
 }

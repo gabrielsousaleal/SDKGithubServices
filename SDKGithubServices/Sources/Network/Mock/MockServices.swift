@@ -45,6 +45,6 @@ public class MockServices: ServicesProtocol {
         }
     }
 
-    public func request(url: URL, header: [String: Any], success: @escaping (Data) -> Void, failure: @escaping (Error) -> Void) {
+    public func request(url: URL, success: @escaping (Data) -> Void, failure: @escaping (Error) -> Void) {
     }
 }
